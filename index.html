@@ -1,0 +1,21 @@
+<html>
+<body>
+<script>
+
+var array = [];
+    fileLoad();
+    async function fileLoad() {
+  try {
+    const response = await fetch('info.txt');
+    const data = await response.text();
+    array = data.split('\n');
+  } catch (error) {
+    alert('Error reading file:'+error);
+  }
+
+alert(array)
+ }
+
+</script>
+</body>
+</html>
